@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">FlashLight</string>
+    <string name="app_name">AndroLight</string>
+    <string name="appwidget_text">AndroLight</string>
+    <string name="add_widget">Add widget</string>
+    <string name="title_activity_about">AboutActivity</string>
+
+    <!-- About dialog -->
+    <string name="about_author_name" translatable="false">Nelson G.K. </string>
+    <string name="author_name">Author Name </string>
+    <string name="about_twitter_link">Twitter  </string>
+    <string name="about_description">A simple flashlight app for Android™.</string>
+    <string name="about_homepage_link" translatable="false">twitter.com/Nelson_Guest_k</string>
+    <string name="about_version_text">Version:</string>
+
 </resources>

@@ -1,8 +1,14 @@
 package com.theedge.nelsongkatale.android_flashlight;
+/**
+ * Author :Nelson G katale
+ * Description:A simple android flashlight utility.
+ */
+
 import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.hardware.camera2.CameraAccessException;
@@ -13,6 +19,10 @@ import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v4.content.PermissionChecker;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -34,7 +44,6 @@ public class FlashlightActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
         flashLightButton = (ImageButton) findViewById(R.id.button);
-
             flashLightButton.setOnClickListener(new View.OnClickListener() {
                 @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
                 @Override
@@ -59,8 +68,32 @@ public class FlashlightActivity extends AppCompatActivity {
                     }
                 }
             });
+
+    //settings toolbar
+        Toolbar settings_toolbar=(Toolbar)findViewById(R.id.settings_toolbar);
+        setSupportActionBar(settings_toolbar);
+    }
+
+    //toolbar
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.about,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.about_app:
+                Intent intent=new Intent(this,AboutActivity.class);
+                startActivity(intent);
+                break;
         }
-    /**method sets flashlight on*/
+        return super.onOptionsItemSelected(item);
+    }
+
+    /**Toggles flashlight on*/
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void toggleOn(){
         CameraManager cameraManager=(CameraManager)getSystemService(Context.CAMERA_SERVICE);
@@ -75,7 +108,7 @@ public class FlashlightActivity extends AppCompatActivity {
         }
     }
 
-    /* method  sets flashlight off*/
+    /* Toggles flashlight off*/
     private void toggleOff(){
         CameraManager cameraManager=(CameraManager)getSystemService(Context.CAMERA_SERVICE);
 
@@ -134,8 +167,4 @@ public class FlashlightActivity extends AppCompatActivity {
 
         }
     }
-
-    /*public int add(int a, int b){
-        return 0;
-    }*/
 }

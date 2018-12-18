@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Android_FlashLight.iml" filepath="$PROJECT_DIR$/Android_FlashLight.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Android_Flashlight.iml" filepath="$PROJECT_DIR$/Android_Flashlight.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
