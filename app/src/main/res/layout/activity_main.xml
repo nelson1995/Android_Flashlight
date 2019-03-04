@@ -13,15 +13,36 @@
         />
     <ImageButton
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="180dp"
         android:id="@+id/button"
         android:background="@null"
         android:contentDescription="@null"
         android:src="@drawable/lighton"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginTop="250dp"
-        android:layout_marginBottom="100dp"
-        />
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="100dp" />
+
+    <!--<ToggleButton-->
+        <!--android:id="@+id/togglebutton"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textOn="light On"-->
+        <!--android:textOff="light Off"-->
+        <!--android:layout_marginLeft="150dp"-->
+        <!--android:layout_marginRight="50dp"-->
+        <!--android:layout_marginTop="350dp"-->
+        <!--android:layout_marginBottom="100dp"-->
+        <!--android:background="@color/colorDark"-->
+        <!--/>-->
+    <!--<Switch-->
+        <!--android:id="@+id/lightswitch"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:text="Switch"-->
+        <!--android:layout_marginLeft="150dp"-->
+        <!--android:layout_marginRight="50dp"-->
+        <!--android:layout_marginTop="350dp"-->
+        <!--android:layout_marginBottom="100dp" />-->
 
 </RelativeLayout>
