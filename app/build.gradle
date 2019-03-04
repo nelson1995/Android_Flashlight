@@ -1,15 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '25.0.0'
+    compileSdkVersion 26
+    buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.theedge.nelsongkatale.flashlight"
-        minSdkVersion 19
-        targetSdkVersion 25
+        minSdkVersion 15
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -19,14 +20,14 @@ android {
     }
 }
 
-
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:25.0.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
-    compile 'com.android.support:support-v4:25.3.1'
-    testCompile 'junit:junit:4.12'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:support-vector-drawable:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'android.arch.lifecycle:runtime:1.0.0'
+    implementation 'android.arch.lifecycle:extensions:1.0.0'
+    annotationProcessor "android.arch.lifecycle:compiler:1.0.0"
 }
